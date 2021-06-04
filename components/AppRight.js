@@ -6,26 +6,34 @@ function AppRight() {
   return (
     <div className="flex flex-col font-poppins p-5 h-screen">
       <header className="flex justify-between items-center w-full h-16 ">
-        <AppsIcon className="font-semibold text-blue" />
+        <AppsIcon className="font-semibold text-blue cursor-pointer hover:bg-[#F3F4F6] p-1 rounded-full !w-9  delay-100 duration-100 !h-9" />
         <div className="flex justify-around items-center w-6/12">
-          <h3 className="font-semibold text-blue">Gallery</h3>
-          <h3 className="font-semibold text-blue">Stories</h3>
+          <h3 className="font-semibold text-blue hover:border-b-[2px] cursor-pointer border-blue hover:text-lg delay-100 duration-100">
+            Gallery
+          </h3>
+          <h3 className="font-semibold text-blue hover:border-b-[2px] cursor-pointer border-blue hover:text-lg delay-100 duration-100">
+            Stories
+          </h3>
           <Image
             width={40}
             height={40}
-            className="rounded-full text-center"
+            className="rounded-full text-center cursor-pointer hover:"
             src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1622777589/ben-sweet-2LowviVHZ-E-unsplash_1_nud97c.jpg"
             alt=""
           />
         </div>
       </header>
-      <h2 className="text-3xl text-blue p-4">Discover</h2>
+      <h2 className="text-3xl text-blue p-4 pr-0">Discover</h2>
       <div className="flex justify-evenly w-80 p-4">
         <h2 className="text-xl text-orange border-b-[2px] border-orange">
           Popular
         </h2>
-        <h2 className="text-xl text-gray">Adventure</h2>
-        <h2 className="text-xl text-gray">Tour</h2>
+        <h2 className="text-xl text-gray hover:text-orange delay-100 duration-100 hover:border-b-[2px] cursor-pointer border-orange">
+          Adventure
+        </h2>
+        <h2 className="text-xl text-gray delay-100 duration-100 hover:text-orange hover:border-b-[2px] cursor-pointer border-orange">
+          Tour
+        </h2>
       </div>
       <div className="flex overflow-scroll hidescrollbar">
         <img
