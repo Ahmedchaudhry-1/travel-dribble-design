@@ -1,64 +1,128 @@
-import AppsIcon from "@material-ui/icons/Apps";
-import Image from "next/image";
-import TravelOption from "./TravelOption";
+import { ViewGridIcon } from "@heroicons/react/outline";
+import { useState } from "react";
+import TravelOptions from "./TravelOptions";
 
 function AppRight() {
+  const [places, setPlaces] = useState("Popular");
+
   return (
-    <div className="flex flex-col font-poppins p-5 h-screen">
-      <header className="flex justify-between items-center w-full h-16 ">
-        <AppsIcon className="font-semibold text-blue cursor-pointer hover:bg-[#F3F4F6] p-1 rounded-full !w-9  delay-100 duration-100 !h-9" />
-        <div className="flex justify-around items-center w-6/12">
-          <h3 className="font-semibold text-blue hover:border-b-[2px] cursor-pointer border-blue hover:text-lg delay-100 duration-100">
-            Gallery
-          </h3>
-          <h3 className="font-semibold text-blue hover:border-b-[2px] cursor-pointer border-blue hover:text-lg delay-100 duration-100">
-            Stories
-          </h3>
-          <Image
-            width={40}
-            height={40}
-            className="rounded-full text-center cursor-pointer hover:"
+    <div className="p-10">
+      <header className="flex justify-between">
+        <ViewGridIcon className="h-8 w-8 hover:bg-lightGray rounded-full cursor-pointer p-1" />
+        <div className="flex items-center">
+          <p className="link">Gallery</p>
+          <p className="link">Stories</p>
+          <img
+            className="h-10 w-10 rounded-full"
             src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1622777589/ben-sweet-2LowviVHZ-E-unsplash_1_nud97c.jpg"
-            alt=""
           />
         </div>
       </header>
-      <h2 className="text-3xl text-blue p-4 pr-0">Discover</h2>
-      <div className="flex justify-evenly w-80 p-4">
-        <h2 className="text-xl text-orange border-b-[2px] border-orange">
+
+      <h1 className="text-blue font-semibold text-4xl">Discover</h1>
+      <div className="flex w-64 justify-evenly mt-10">
+        <p
+          onClick={() => setPlaces("Popular")}
+          className={
+            places === "Popular"
+              ? "text-orange text-xl border-b-[2px] border-orange"
+              : "text-gray text-xl hover:text-orange cursor-pointer hover:border-b-[2px] border-orange delay-75 duration-100"
+          }
+        >
           Popular
-        </h2>
-        <h2 className="text-xl text-gray hover:text-orange delay-100 duration-100 hover:border-b-[2px] cursor-pointer border-orange">
+        </p>
+        <p
+          onClick={() => setPlaces("Adventure")}
+          className={
+            places === "Adventure"
+              ? "text-orange text-xl border-b-[2px] border-orange"
+              : "text-gray text-xl hover:text-orange cursor-pointer hover:border-b-[2px] border-orange delay-75 duration-100"
+          }
+        >
           Adventure
-        </h2>
-        <h2 className="text-xl text-gray delay-100 duration-100 hover:text-orange hover:border-b-[2px] cursor-pointer border-orange">
+        </p>
+        <p
+          onClick={() => setPlaces("Tour")}
+          className={
+            places === "Tour"
+              ? "text-orange text-xl border-b-[2px] border-orange"
+              : "text-gray text-xl hover:text-orange cursor-pointer hover:border-b-[2px] border-orange delay-75 duration-100"
+          }
+        >
           Tour
-        </h2>
+        </p>
       </div>
-      <div className="flex overflow-scroll hidescrollbar">
-        <img
-          className="w-60 h-80 mx-2 rounded-xl"
-          src="https://images.unsplash.com/photo-1531101860752-fdad86cec994?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-          alt="mountains"
-        />
-        <img
-          className="w-60 h-80 mx-2 rounded-xl"
-          src="https://images.unsplash.com/photo-1457459686225-c7db79d4e59f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=335&q=80"
-          alt="mountains"
-        />
-        <img
-          className="w-60 h-80 mx-2 rounded-xl"
-          src="https://images.unsplash.com/photo-1575351881847-b3bf188d9d0a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-          alt="hot air balloons"
-        />
+      <div className="flex overflow-scroll hidescrollbar mt-5">
+        {places === "Popular" ? (
+          <>
+            <img
+              className="w-60 h-80 mx-2 rounded-xl"
+              src="https://images.unsplash.com/photo-1575351881847-b3bf188d9d0a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+              alt="hot air balloons"
+            />
+            <img
+              className="w-60 h-80 mx-2 rounded-xl"
+              src="https://images.unsplash.com/photo-1531101860752-fdad86cec994?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+              alt="mountains"
+            />{" "}
+            <img
+              className="w-60 h-80 mx-2 rounded-xl"
+              src="https://images.unsplash.com/photo-1593176507419-1cb51a633c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+              alt="Paris"
+            />
+          </>
+        ) : (
+          <></>
+        )}
+        {places === "Adventure" ? (
+          <>
+            <img
+              className="w-60 h-80 mx-2 rounded-xl"
+              src="https://images.unsplash.com/photo-1560205318-8747e073c3d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+              alt="Surfing"
+            />
+            <img
+              className="w-60 h-80 mx-2 rounded-xl"
+              src="https://images.unsplash.com/photo-1457459686225-c7db79d4e59f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=335&q=80"
+              alt="mountains"
+            />
+            <img
+              className="w-60 h-80 mx-2 rounded-xl"
+              src="https://images.unsplash.com/photo-1541542684-be0c46417a12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=358&q=80"
+              alt="mountains"
+            />
+          </>
+        ) : (
+          <></>
+        )}
+        {places === "Tour" ? (
+          <>
+            <img
+              className="w-60 h-80 mx-2 rounded-xl"
+              src="https://images.unsplash.com/photo-1612017123334-ad2ed827ab4f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+              alt="lake"
+            />
+            <img
+              className="w-60 h-80 mx-2 rounded-xl"
+              src="https://images.unsplash.com/photo-1595688736300-a2541c0c3f26?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+              alt="mountains"
+            />
+            <img
+              className="w-60 h-80 mx-2 rounded-xl"
+              src="https://images.unsplash.com/photo-1532370731809-bbe1661d7bf5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+            />
+          </>
+        ) : (
+          <></>
+        )}
       </div>
-      <h2 className="text-3xl text-blue font-semibold pt-1">Types of Travel</h2>
-      <div className="flex overflow-scroll hidescrollbar w-full pt-5 h-40 justify-evenly">
-        <TravelOption emoji="⭐" title="Luxury" active />
-        <TravelOption emoji="🦁" title="Safari" />
-        <TravelOption emoji="🚄" title="Train" />
-        <TravelOption emoji="👪" title="Family" />
-        <TravelOption emoji="👨" title="Alone" />
+      <h1 className="text-blue font-bold text-4xl mt-5">Types of Travel</h1>
+      <div className="flex justify-evenly mt-2">
+        <TravelOptions emoji="⭐" title="Luxury" active />
+        <TravelOptions emoji="🦁" title="Safari" />
+        <TravelOptions emoji="🚄" title="Train" />
+        <TravelOptions emoji="👪" title="Family" />
+        <TravelOptions emoji="👨" title="Alone" />
       </div>
     </div>
   );

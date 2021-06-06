@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 @layer components {
+  .link {
+    @apply text-blue mr-2 text-lg font-semibold cursor-pointer hover:border-b-[2px] border-blue duration-100 delay-75;
+  }
 }
 
 .hidescrollbar::-webkit-scrollbar {

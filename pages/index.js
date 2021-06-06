@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import AppRight from "../components/AppRight";
 
 export default function Home() {
@@ -29,7 +28,7 @@ export default function Home() {
           <p className="text-sm text-white mt-6">
             Plan your vacations on the most beautiful places in the world
           </p>
-          <button className="px-10 mt-6 rounded-xl py-2 bg-orange text-white">
+          <button className="px-10 mt-6 focus:outline-none rounded-xl py-2 bg-orange text-white">
             Get Started
           </button>
         </div>
