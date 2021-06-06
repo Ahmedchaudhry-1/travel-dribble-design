@@ -1,5 +1,5 @@
-import { ViewGridIcon } from "@heroicons/react/outline";
 import { useState } from "react";
+import Header from "./Header";
 import TravelOptions from "./TravelOptions";
 
 function AppRight() {
@@ -7,17 +7,7 @@ function AppRight() {
 
   return (
     <div className="p-10">
-      <header className="flex justify-between">
-        <ViewGridIcon className="h-8 w-8 hover:bg-lightGray rounded-full cursor-pointer p-1" />
-        <div className="flex items-center">
-          <p className="link">Gallery</p>
-          <p className="link">Stories</p>
-          <img
-            className="h-10 w-10 rounded-full"
-            src="https://res.cloudinary.com/dssvrf9oz/image/upload/v1622777589/ben-sweet-2LowviVHZ-E-unsplash_1_nud97c.jpg"
-          />
-        </div>
-      </header>
+      <Header />
 
       <h1 className="text-blue font-semibold text-4xl">Discover</h1>
       <div className="flex w-64 justify-evenly mt-10">
