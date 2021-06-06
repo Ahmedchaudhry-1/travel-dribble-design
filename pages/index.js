@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import AppRight from "../components/AppRight";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const router = useRouter();
@@ -18,7 +19,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div
+      <motion.div
+        initial="imageInitial"
+        animate="imageAnimate"
+        variants={{
+          imageInitial: {
+            opacity: 0,
+          },
+          imageAnimate: {
+            opacity: 1,
+          },
+        }}
         style={{
           background:
             "url(https://res.cloudinary.com/dssvrf9oz/image/upload/v1622735422/mads-schmidt-rasmussen-xfngap_DToE-unsplash_k3yczw.jpg)",
@@ -36,9 +47,25 @@ export default function Home() {
           <p className="text-sm text-white mt-6">
             Plan your vacations on the most beautiful places in the world
           </p>
-          <button className="px-10 mt-6 focus:outline-none rounded-xl py-2 bg-orange text-white">
+          <motion.button
+            whileHover={{
+              scale: [1, 1.1],
+              zIndex: 1,
+              transition: {
+                duration: 0.2,
+              },
+            }}
+            whileTap={{
+              scale: [1, 1.1],
+              zIndex: 1,
+              transition: {
+                duration: 0.2,
+              },
+            }}
+            className="px-10 mt-6 focus:outline-none rounded-xl py-2 bg-orange text-white"
+          >
             Get Started
-          </button>
+          </motion.button>
         </div>
         <div className="absolute bottom-10 hidden left-40 md:flex items-center">
           <h1 className="mr-1 text-white">01</h1>
@@ -48,7 +75,7 @@ export default function Home() {
           <h1 className="text-white">03</h1>
         </div>
         <div className="sm:absolute hidden bg-white h-10 w-1 rounded-full mr-1 top-[50vh] left-[58%]"></div>
-      </div>
+      </motion.div>
       <div style={{ flex: "0.4" }}>
         <AppRight />
       </div>

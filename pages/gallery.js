@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import Header from "../components/Header";
+import { motion } from "framer-motion";
 
 function gallery({
   images,
@@ -22,74 +23,145 @@ function gallery({
       </header>
       <div className="flex flex-wrap items-start hidescrollbar">
         {images.results.map((image) => (
-          <Image
-            objectFit="contain"
-            width={300}
-            height={300}
+          <motion.div
             key={image.id}
-            src={image.urls.small}
-            className="!m-2"
-          />
+            whileHover={{
+              scale: [1, 1.15, 1.1],
+              zIndex: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+          >
+            <Image
+              objectFit="contain"
+              width={300}
+              height={300}
+              src={image.urls.small}
+              className="!m-2"
+            />
+          </motion.div>
         ))}
         {images2.results.map((image) => (
-          <Image
-            objectFit="contain"
-            width={300}
-            height={300}
+          <motion.div
             key={image.id}
-            src={image.urls.small}
-            className="!m-2"
-          />
+            whileHover={{
+              scale: [1, 1.15, 1.1],
+              zIndex: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+          >
+            <Image
+              objectFit="contain"
+              width={300}
+              height={300}
+              src={image.urls.small}
+              className="!m-2"
+            />
+          </motion.div>
         ))}
         {images3.results.map((image) => (
-          <Image
-            objectFit="contain"
-            width={300}
-            height={300}
+          <motion.div
             key={image.id}
-            src={image.urls.small}
-            className="!m-2"
-          />
+            whileHover={{
+              scale: [1, 1.15, 1.1],
+              zIndex: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+          >
+            <Image
+              objectFit="contain"
+              width={300}
+              height={300}
+              key={image.id}
+              src={image.urls.small}
+              className="!m-2"
+            />
+          </motion.div>
         ))}
         {images4.results.map((image) => (
-          <Image
-            objectFit="contain"
-            width={300}
-            height={300}
+          <motion.div
             key={image.id}
-            src={image.urls.small}
-            className="!m-2"
-          />
+            whileHover={{
+              scale: [1, 1.15, 1.1],
+              zIndex: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+          >
+            <Image
+              objectFit="contain"
+              width={300}
+              height={300}
+              src={image.urls.small}
+              className="!m-2"
+            />
+          </motion.div>
         ))}
         {images5.results.map((image) => (
-          <Image
-            objectFit="contain"
-            width={300}
-            height={300}
+          <motion.div
             key={image.id}
-            src={image.urls.small}
-            className="!m-2"
-          />
+            whileHover={{
+              scale: [1, 1.15, 1.1],
+              zIndex: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+          >
+            <Image
+              objectFit="contain"
+              width={300}
+              height={300}
+              src={image.urls.small}
+              className="!m-2"
+            />
+          </motion.div>
         ))}
         {images6.results.map((image) => (
-          <Image
-            objectFit="contain"
-            width={300}
-            height={300}
+          <motion.div
             key={image.id}
-            src={image.urls.small}
-            className="!m-2"
-          />
+            whileHover={{
+              scale: [1, 1.15, 1.1],
+              zIndex: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+          >
+            <Image
+              objectFit="contain"
+              width={300}
+              height={300}
+              src={image.urls.small}
+              className="!m-2"
+            />
+          </motion.div>
         ))}
         {images7.results.map((image) => (
-          <Image
-            objectFit="contain"
-            width={300}
-            height={300}
+          <motion.div
             key={image.id}
-            src={image.urls.small}
-            className="!m-2"
-          />
+            whileHover={{
+              scale: [1, 1.15, 1.1],
+              zIndex: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+          >
+            <Image
+              objectFit="contain"
+              width={300}
+              height={300}
+              src={image.urls.small}
+              className="!m-2"
+            />
+          </motion.div>
         ))}
       </div>
     </div>

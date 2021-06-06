@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import Header from "./Header";
 import TravelOptions from "./TravelOptions";
@@ -54,7 +55,7 @@ function AppRight() {
               className="w-60 h-80 mx-2 rounded-xl"
               src="https://images.unsplash.com/photo-1531101860752-fdad86cec994?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
               alt="mountains"
-            />{" "}
+            />
             <img
               className="w-60 h-80 mx-2 rounded-xl"
               src="https://images.unsplash.com/photo-1593176507419-1cb51a633c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
