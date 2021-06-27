@@ -38,7 +38,7 @@ function gallery({
               width={300}
               height={300}
               src={image.urls.small}
-              className="!m-2"
+              className="!mx-2"
             />
           </motion.div>
         ))}
@@ -58,7 +58,7 @@ function gallery({
               width={300}
               height={300}
               src={image.urls.small}
-              className="!m-2"
+              className="!mx-2"
             />
           </motion.div>
         ))}
@@ -79,7 +79,7 @@ function gallery({
               height={300}
               key={image.id}
               src={image.urls.small}
-              className="!m-2"
+              className="!mx-2"
             />
           </motion.div>
         ))}
@@ -99,7 +99,7 @@ function gallery({
               width={300}
               height={300}
               src={image.urls.small}
-              className="!m-2"
+              className="!mx-2"
             />
           </motion.div>
         ))}
@@ -119,7 +119,7 @@ function gallery({
               width={300}
               height={300}
               src={image.urls.small}
-              className="!m-2"
+              className="!mx-2"
             />
           </motion.div>
         ))}
@@ -139,7 +139,7 @@ function gallery({
               width={300}
               height={300}
               src={image.urls.small}
-              className="!m-2"
+              className="!mx-2"
             />
           </motion.div>
         ))}
@@ -159,7 +159,7 @@ function gallery({
               width={300}
               height={300}
               src={image.urls.small}
-              className="!m-2"
+              className="!mx-2"
             />
           </motion.div>
         ))}
